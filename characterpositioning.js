@@ -7,19 +7,15 @@ function countLetters(str){
   var arrPosition = [];
   var letterCount = 0;
     for (var j = 0; j < str.length; j++){
-      if (str[i] === str[j] && letterPosition!= 0){
+      if (str[i] === str[j]){
         //letterPosition = letterPosition + ', ' + j;
-
+        letterPosition = j
         letterCount += 1;
-      } else if (str[i] === str[j]){
-        letterPosition = j;
+    arrPosition.push(letterPosition);
 
-        letterCount += 1;
       }
-      arrPosition.push(letterPosition);
     }
-
-    objLetterCount[str[i] + " occurs " + letterCount + " times at positions"] = arrPosition;
+    objLetterCount[str[i]] = arrPosition;
   }
   return objLetterCount;
 }
